@@ -4690,7 +4690,7 @@ function library:CreateSettingsTab(menu)
         setclipboard(([[game:GetService("TeleportService"):TeleportToPlaceInstance(%s, "%s")]]):format(game.PlaceId, game.JobId))
     end})
 
-    mainSection:AddButton({text = 'Unload', confirm = true, callback = function()
+    mainSection:AddButton({text = 'Unload Menu', confirm = true, callback = function()
         library:Unload();
     end})
 
