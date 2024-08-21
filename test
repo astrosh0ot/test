@@ -4698,6 +4698,10 @@ function library:CreateSettingsTab(menu)
         setclipboard(([[game:GetService("TeleportService"):TeleportToPlaceInstance(%s, "%s")]]):format(game.PlaceId, game.JobId))
     end})
 
+    mainSection:AddButton({text = 'NoClip', callback = function()
+        setclipboard(([[game:GetService("TeleportService"):TeleportToPlaceInstance(%s, "%s")]]):format(game.PlaceId, game.JobId))
+    end})
+
     local themeStrings = {};
     for _,v in next, library.themes do
         table.insert(themeStrings, v.name)
