@@ -4678,7 +4678,7 @@ function library:CreateSettingsTab(menu)
         })
     end})
     
-    mainSection:AddButton({text = 'Copy Discord', flag = 'copydiscord', callback = function()
+    mainSection:AddButton({text = 'Fly (Swim version)', flag = 'copydiscord', callback = function()
         setclipboard('https://discord.gg/'..getgenv().Config.Invite)
     end})
 
@@ -4686,12 +4686,16 @@ function library:CreateSettingsTab(menu)
         game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId);
     end})
 
-    mainSection:AddButton({text = 'Copy Join Script', callback = function()
+    mainSection:AddButton({text = 'SpeedHack', callback = function()
         setclipboard(([[game:GetService("TeleportService"):TeleportToPlaceInstance(%s, "%s")]]):format(game.PlaceId, game.JobId))
     end})
 
     mainSection:AddButton({text = 'Unload', confirm = true, callback = function()
         library:Unload();
+    end})
+
+    mainSection:AddButton({text = 'Infinite Jump', callback = function()
+        setclipboard(([[game:GetService("TeleportService"):TeleportToPlaceInstance(%s, "%s")]]):format(game.PlaceId, game.JobId))
     end})
 
     local themeStrings = {};
