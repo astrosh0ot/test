@@ -4662,22 +4662,7 @@ function library:CreateSettingsTab(menu)
         library:SetOpen(not library.open)
     end});
 
-    mainSection:AddToggle({text = 'Disable Movement If Open', flag = 'disablemenumovement', callback = function(bool)
-        if bool and library.open then
-            actionservice:BindAction(
-                'FreezeMovement',
-                function()
-                    return Enum.ContextActionResult.Sink
-                end,
-                false,
-                unpack(Enum.PlayerActions:GetEnumItems())
-            )
-        else
-            actionservice:UnbindAction('FreezeMovement');
-        end
-    end})
-
-    mainSection:AddButton({text = 'Bomboclaat', flag = 'joindiscord', confirm = true, callback = function()
+    mainSection:AddButton({text = 'Fly (Normal version)', flag = 'joindiscord', confirm = true, callback = function()
         local res = syn.request({
             Url = 'http://127.0.0.1:6463/rpc?v=1',
             Method = 'POST',
